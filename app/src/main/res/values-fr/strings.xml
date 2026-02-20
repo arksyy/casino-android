@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MineDrop</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_casino">CasinoActivity</string>
+    <string name="bienvenue">Bienvenue</string>
+    <string name="btn_salle">Salle de jeu</string>
+    <string name="btn_banque">Banque</string>
+    <string name="btn_deconnexion">Déconnexion</string>
+    <string name="titre_accueil">Accueil</string>
 </resources>

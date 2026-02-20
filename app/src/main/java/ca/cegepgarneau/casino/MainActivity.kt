@@ -1,6 +1,7 @@
 package ca.cegepgarneau.casino
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -30,13 +31,15 @@ import androidx.compose.ui.unit.dp
 import ca.cegepgarneau.casino.ui.theme.CasinoTheme
 
 class MainActivity : ComponentActivity() {
+    lateinit var sp: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
+        sp = getSharedPreferences("PREFS", MODE_PRIVATE)
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             CasinoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Connexion(modifier = Modifier.padding(innerPadding))
+                    Connexion(modifier = Modifier.padding(innerPadding), sp)
                 }
             }
         }
@@ -44,7 +47,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Connexion(modifier: Modifier = Modifier) {
+fun Connexion(modifier: Modifier = Modifier, sp: SharedPreferences) {
     var username by remember { mutableStateOf("") }
     val context = LocalContext.current
 
@@ -69,8 +72,16 @@ fun Connexion(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(24.dp))
 
         Button(
-            onClick = { val intent = Intent(context, CasinoActivity::class.java)
-                context.startActivity(intent) },
+            onClick = {
+                val editor = sp.edit()
+                if (!sp.contains(username)) {
+                    editor.putInt(username, 15)
+                }
+                editor.putString("SESSION", username)
+                editor.apply()
+                val intent = Intent(context, CasinoActivity::class.java)
+                context.startActivity(intent)
+            },
             enabled = true
         ) {
             Text("Connnexion")

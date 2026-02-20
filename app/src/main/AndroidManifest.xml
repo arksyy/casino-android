@@ -15,7 +15,8 @@
             android:name=".CasinoActivity"
             android:exported="false"
             android:label="@string/title_activity_casino"
-            android:theme="@style/Theme.Casino" />
+            android:theme="@style/Theme.Casino"
+            android:parentActivityName="ca.cegepgarneau.casino.MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

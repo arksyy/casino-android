@@ -2,4 +2,9 @@
     <string name="app_name">MineDrop</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="title_activity_casino">CasinoActivity</string>
+    <string name="bienvenue">Welcome</string>
+    <string name="btn_salle">Game Room</string>
+    <string name="btn_banque">Bank</string>
+    <string name="btn_deconnexion">Logout</string>
+    <string name="titre_accueil">Home</string>
 </resources>
