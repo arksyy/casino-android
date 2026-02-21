@@ -84,7 +84,7 @@ fun EcranAccueil(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "${stringResource(R.string.bienvenue)}, $username!")
+        Text(text = "${stringResource(R.string.bienvenue)}, $username! Solde: $solde")
 
         Spacer(modifier = Modifier.height(24.dp))
 

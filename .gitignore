@@ -1,1 +1,8 @@
 tp1_mobile.pdf
+.DS_Store
+.vscode/
+build/
+.gradle/
+local.propreties
+.idea/
+*.iml
