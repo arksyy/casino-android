@@ -32,6 +32,7 @@ import ca.cegepgarneau.casino.ui.theme.CasinoTheme
 
 class MainActivity : ComponentActivity() {
     lateinit var sp: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         sp = getSharedPreferences("PREFS", MODE_PRIVATE)
         super.onCreate(savedInstanceState)
@@ -39,7 +40,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CasinoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Connexion(modifier = Modifier.padding(innerPadding), sp)
+                    connexion(modifier = Modifier.padding(innerPadding), sp)
                 }
             }
         }
@@ -47,17 +48,21 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Connexion(modifier: Modifier = Modifier, sp: SharedPreferences) {
+fun connexion(
+    modifier: Modifier = Modifier,
+    sp: SharedPreferences,
+) {
     var username by remember { mutableStateOf("") }
     val context = LocalContext.current
 
-    Column(modifier = modifier.fillMaxSize(),
+    Column(
+        modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center) {
-
+        verticalArrangement = Arrangement.Center,
+    ) {
         Text(
             text = "MineDrop",
-            style = MaterialTheme.typography.headlineLarge
+            style = MaterialTheme.typography.headlineLarge,
         )
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -66,7 +71,7 @@ fun Connexion(modifier: Modifier = Modifier, sp: SharedPreferences) {
             value = username,
             onValueChange = { username = it },
             label = { Text("Nom d'utilisateur") },
-            singleLine = true
+            singleLine = true,
         )
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -82,7 +87,7 @@ fun Connexion(modifier: Modifier = Modifier, sp: SharedPreferences) {
                 val intent = Intent(context, CasinoActivity::class.java)
                 context.startActivity(intent)
             },
-            enabled = true
+            enabled = true,
         ) {
             Text("Connnexion")
         }

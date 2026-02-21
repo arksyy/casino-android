@@ -8,4 +8,7 @@
     <string name="btn_banque">Banque</string>
     <string name="btn_deconnexion">Déconnexion</string>
     <string name="titre_accueil">Accueil</string>
+    <string name="titre_banque">Banque</string>
+    <string name="nb_jetons">Nombre de jetons</string>
+    <string name="btn_acheter">Acheter</string>
 </resources>

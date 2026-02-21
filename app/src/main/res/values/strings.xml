@@ -7,4 +7,7 @@
     <string name="btn_banque">Bank</string>
     <string name="btn_deconnexion">Logout</string>
     <string name="titre_accueil">Home</string>
+    <string name="titre_banque">Bank</string>
+    <string name="nb_jetons">Number of tokens</string>
+    <string name="btn_acheter">Purchase</string>
 </resources>
