@@ -1,13 +1,23 @@
 <resources>
     <string name="app_name">MineDrop</string>
-    <string name="title_activity_main2">MainActivity2</string>
-    <string name="title_activity_casino">CasinoActivity</string>
     <string name="bienvenue">Welcome</string>
     <string name="btn_salle">Game Room</string>
     <string name="btn_banque">Bank</string>
-    <string name="btn_deconnexion">Logout</string>
     <string name="titre_accueil">Home</string>
     <string name="titre_banque">Bank</string>
     <string name="nb_jetons">Number of tokens</string>
-    <string name="btn_acheter">Purchase</string>
+    <string name="btn_acheter">Claim</string>
+    <string name="titre_salle">Game Room</string>
+    <string name="mise">Bet amount</string>
+    <string name="label_pair">Even</string>
+    <string name="label_impair">Odd</string>
+    <string name="numero">Number (0-36)</string>
+    <string name="btn_jouer">Play</string>
+    <string name="solde">Balance</string>
+    <string name="msg_solde_insuffisant">Insufficient balance</string>
+    <string name="msg_gagne">Big Win !</string>
+    <string name="msg_perdu">You lost.</string>
+    <string name="msg_pari_nul">The bet did not work.</string>
+    <string name="titre_connexion">Login</string>
+    <string name="username">Username</string>
 </resources>

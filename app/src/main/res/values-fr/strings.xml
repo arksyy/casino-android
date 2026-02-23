@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MineDrop</string>
-    <string name="title_activity_main2">MainActivity2</string>
-    <string name="title_activity_casino">CasinoActivity</string>
     <string name="bienvenue">Bienvenue</string>
     <string name="btn_salle">Salle de jeu</string>
     <string name="btn_banque">Banque</string>
-    <string name="btn_deconnexion">Déconnexion</string>
     <string name="titre_accueil">Accueil</string>
     <string name="titre_banque">Banque</string>
     <string name="nb_jetons">Nombre de jetons</string>
-    <string name="btn_acheter">Acheter</string>
+    <string name="btn_acheter">Réclamer</string>
+    <string name="titre_salle">Salle de jeu</string>
+    <string name="mise">Montant de la mise</string>
+    <string name="label_pair">Pair</string>
+    <string name="label_impair">Impair</string>
+    <string name="numero">Numéro (0-36)</string>
+    <string name="btn_jouer">Jouer</string>
+    <string name="msg_solde_insuffisant">Solde insuffisant</string>
+    <string name="solde">Solde</string>
+    <string name="titre_connexion">Connexion</string>
+    <string name="msg_gagne">Vous avez gagné !</string>
+    <string name="msg_perdu">Vous avez perdu.</string>
+    <string name="msg_pari_nul">Le pari n\'a pas fonctionné.</string>
+    <string name="username">Nom d\'utilisateur</string>
 </resources>
