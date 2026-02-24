@@ -67,6 +67,7 @@ fun ecranSalle(
     val msgPerdu = stringResource(R.string.msg_perdu)
     val msgPariNul = stringResource(R.string.msg_pari_nul)
 
+    val pariValide = modeSelectionne.isNotEmpty() || numero.isNotEmpty()
     Scaffold(
         containerColor = Color(0xFFA7B0BC),
         topBar = {
@@ -193,6 +194,7 @@ fun ecranSalle(
                         // bouton pour jouer
                         Button(
                             onClick = onJouer,
+                            enabled = pariValide,
                             modifier = Modifier.fillMaxWidth().padding(horizontal = 135.dp),
                         ) {
                             Text(stringResource(R.string.btn_jouer), fontSize = 18.sp, fontWeight = FontWeight.Bold)
@@ -256,6 +258,7 @@ fun ecranSalle(
                     // bouton pour jouer
                     Button(
                         onClick = onJouer,
+                        enabled = pariValide,
                         modifier = Modifier.fillMaxWidth().padding(horizontal = paddingBouton),
                     ) {
                         Text(stringResource(R.string.btn_jouer), fontSize = 18.sp, fontWeight = FontWeight.Bold)

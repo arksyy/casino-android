@@ -114,7 +114,7 @@ fun connexion(
                 val intent = Intent(context, CasinoActivity::class.java)
                 context.startActivity(intent)
             },
-            enabled = true,
+            enabled = username.isNotBlank(),
             modifier = Modifier.fillMaxWidth().padding(horizontal = paddingBouton)
         ) {
             Text(stringResource(R.string.titre_connexion), fontSize = 18.sp, fontWeight = FontWeight.Bold)

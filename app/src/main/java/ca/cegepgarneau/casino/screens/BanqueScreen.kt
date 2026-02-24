@@ -107,6 +107,7 @@ fun ecranBanque(
                         onRetour()
                     }
                 },
+                enabled = (montant.toIntOrNull() ?: 0) > 0,
                 modifier = Modifier.fillMaxWidth().padding(horizontal = paddingBouton)
             ) {
                 Text(stringResource(R.string.btn_acheter), fontSize = 18.sp, fontWeight = FontWeight.Bold)
