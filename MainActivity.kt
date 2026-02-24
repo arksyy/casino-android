@@ -37,12 +37,10 @@ import androidx.compose.ui.unit.sp
 import android.content.res.Configuration
 import ca.cegepgarneau.casino.ui.theme.CasinoTheme
 
-// activité qui affiche l'écran de connexion
 @OptIn(ExperimentalMaterial3Api::class)
 class MainActivity : ComponentActivity() {
     lateinit var sp: SharedPreferences
 
-    // initialisation des shared preferences
     override fun onCreate(savedInstanceState: Bundle?) {
         sp = getSharedPreferences("PREFS", MODE_PRIVATE)
         super.onCreate(savedInstanceState)
@@ -53,7 +51,6 @@ class MainActivity : ComponentActivity() {
                     containerColor = Color(0xFFA7B0BC),
                     modifier = Modifier.fillMaxSize(),
                     topBar = {
-                        // barre de titre
                         TopAppBar(
                             title = { Text(stringResource(R.string.app_name), fontSize = 20.sp, fontWeight = FontWeight.Bold) },
                             colors =
@@ -70,7 +67,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-// écran de connexion qui nous permet de login avec notre nom, et qui le sauvegarde dans shared preferences, et qui nous redirige vers l'écran d'accueil du casino
+//écran de connexion qui permets à quelqu'un de se connecter avec leur nom
 @Composable
 fun connexion(
     modifier: Modifier = Modifier,
@@ -92,7 +89,6 @@ fun connexion(
     ) {
         Spacer(modifier = Modifier.height(16.dp))
 
-        // champ de texte pour entrer son nom
         TextField(
             value = username,
             onValueChange = { username = it },
@@ -102,7 +98,6 @@ fun connexion(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // bouton pour se connecter
         Button(
             onClick = {
                 val editor = sp.edit()

@@ -20,4 +20,5 @@
     <string name="msg_pari_nul">The bet did not work.</string>
     <string name="titre_connexion">Login</string>
     <string name="username">Username</string>
+    <string name="title_activity_casino">Casino</string>
 </resources>
